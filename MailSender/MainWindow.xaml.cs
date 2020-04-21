@@ -23,6 +23,7 @@ namespace MailSender
         public MainWindow()
         {
             // комментарий для git
+            // комментарий для git от aka-skif
             InitializeComponent();
         }
     }
