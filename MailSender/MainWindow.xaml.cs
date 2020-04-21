@@ -22,6 +22,7 @@ namespace MailSender
     {
         public MainWindow()
         {
+            // комментарий для git
             InitializeComponent();
         }
     }
