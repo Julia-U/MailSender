@@ -27,6 +27,7 @@ namespace MailSender
             // комментарий из ветви test
             // комментарий с работы
             // еще один комментарий с работы
+            // ещё один комментарий с github
             InitializeComponent();
         }
     }
