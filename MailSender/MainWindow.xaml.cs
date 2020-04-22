@@ -25,6 +25,7 @@ namespace MailSender
             // комментарий для git
             // комментарий для git от aka-skif
             // комментарий из ветви test
+            // комментарий с работы
             InitializeComponent();
         }
     }
