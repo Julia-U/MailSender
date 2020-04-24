@@ -6,9 +6,20 @@
         xmlns:local="clr-namespace:MailSender"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <TextBox x:Name="Name_Letter" HorizontalAlignment="Left" Height="23" Margin="121,174,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="Text_Letter" HorizontalAlignment="Left" Height="23" Margin="121,202,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+           <Window.Resources>
+            <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            </ResourceDictionary>
+          </Window.Resources>
+  <Grid>
+    <TextBox x:Name="Name_Letter" HorizontalAlignment="Left" Height="23" Margin="57,83,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="700"/>
+    <TextBox x:Name="Text_Letter" HorizontalAlignment="Left" Height="122" Margin="57,127,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="700"/>
+    <Button x:Name="btnSendEmail" Content="Отправить e-mail" Margin="609,282,0,0" Width="148" VerticalAlignment="Top" HorizontalAlignment="Left" Click="btnSendEmail_Click" />
 
-    </Grid>
+    <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="609,322,0,0" VerticalAlignment="Top" Width="146"/>
+
+
+  </Grid>
 </Window>
