@@ -59,7 +59,9 @@ namespace MailSender
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show("Невозможно отправить письмо " + ex.ToString());
+                            SendingError se = new SendingError();
+                            se.ShowDialog();
+                            //MessageBox.Show("Невозможно отправить письмо " + ex.ToString());
                         }
                     }
                 } //using (MailMessage mm = new MailMessage("sender@yandex.ru", mail))
