@@ -24,5 +24,10 @@ namespace MailSender_v2
         {
             InitializeComponent();
         }
+
+        private void BtnClock_Click(object sender, RoutedEventArgs e)
+        {
+           //tabControl.SelectedItem = tabPlanner;
+        }
     }
 }
