@@ -27,7 +27,9 @@ namespace MailSender_v2
 
         private void BtnClock_Click(object sender, RoutedEventArgs e)
         {
-           //tabControl.SelectedItem = tabPlanner;
+            //tabControl.SelectedItem = tabPlanner;
+
+            TabTimer.IsSelected = true;
         }
     }
 }

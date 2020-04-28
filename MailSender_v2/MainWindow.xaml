@@ -9,17 +9,19 @@
         mc:Ignorable="d"
         Title="MainWindow" MinWidth="7" Icon="Images/letter.png">
     <DockPanel Margin="0,65,0,0">
-                
+
         <Menu x:Name="menu" Height="25" VerticalAlignment="Top" DockPanel.Dock="Top"/>
-                
+
         <TabControl x:Name="tabControl" DockPanel.Dock="Top">
-            <TabItem Header="Формирование группы рассылки" Height="22" VerticalAlignment="Top">
+            <TabItem Header="Формирование группы рассылки" VerticalAlignment="Top" Margin="0">
                 <Grid Background="#FFE5E5E5" Margin="0">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="8*"/>
-                        <ColumnDefinition Width="17*"/>
+                        <ColumnDefinition Width="64*"/>
+                        <ColumnDefinition Width="178*"/>
+                        <ColumnDefinition Width="105*"/>
+                        <ColumnDefinition Width="408*"/>
                     </Grid.ColumnDefinitions>
-                    <ToolBarTray Height="65" VerticalAlignment="Top" Grid.ColumnSpan="2">
+                    <ToolBarTray Height="65" VerticalAlignment="Top" Grid.ColumnSpan="4">
                         <ToolBar x:Name="tbSender" Height="32" VerticalAlignment="Top" Width="500">
                             <Label x:Name="lSender" Content="Выбрать отправителя" Height="25" VerticalAlignment="Top" Width="130"/>
                             <ComboBox x:Name="cbSenderSelect" Height="24" Margin="0" VerticalAlignment="Top" Width="270" ToolTip="Выбрать email отправителя">
@@ -76,12 +78,12 @@
                         </ToolBar>
 
                     </ToolBarTray>
-                    <DataGrid Height="100" Margin="0,70,10,211" Grid.ColumnSpan="2"/>
-                    
+                    <DataGrid Height="100" Margin="0,72,10,212" Grid.ColumnSpan="4"/>
+
                 </Grid>
 
             </TabItem>
-            <TabItem Header="Планировщик">
+            <TabItem Name="TabTimer" Header="Планировщик" Margin="0">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="133*"/>
@@ -107,7 +109,7 @@
                     <xctk:TimePicker HorizontalAlignment="Left" Margin="10,166,0,0" VerticalAlignment="Top" Width="169" Grid.ColumnSpan="2" Height="25"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="Редактор писем" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="107" Margin="-2,-2,-51,0">
+            <TabItem Header="Редактор писем" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="17*"/>
@@ -122,7 +124,7 @@
                     </RichTextBox>
                 </Grid>
             </TabItem>
-            <TabItem Header="Статистика" HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Width="81" Margin="-2,-2,0,0">
+            <TabItem Header="Статистика" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="16*"/>
@@ -130,7 +132,7 @@
                     </Grid.ColumnDefinitions>
                 </Grid>
             </TabItem>
-        </TabControl>       
-        
+        </TabControl>
+
     </DockPanel>
 </Window>
