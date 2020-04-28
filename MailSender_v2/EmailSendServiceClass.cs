@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 using System.Net.Mail;
+using System.Windows;
 
 namespace MailSender_v2
 {
@@ -45,12 +46,12 @@ namespace MailSender_v2
                 }
             }
         }//private void SendMail(string mail, string name)
-        public void SendMails(IQueryable<Email> emails)
-        {
-            foreach (Email email in emails)
-            {
-                SendMail(email.Email, email.Name);
-            }
-        }
+        //public void SendMails(IQueryable<Email> emails)
+        //{
+        //    foreach (Email email in emails)
+        //    {
+        //        SendMail(email.Email, email.Name);
+        //    }
+        //}
     }  //private void SendMail(string mail, string name)
 }
