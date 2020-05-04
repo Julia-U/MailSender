@@ -44,8 +44,14 @@ namespace MailSender_v2
                 {
                     MessageBox.Show("Невозможно отправить письмо " + ex.ToString());
                 }
+
+
+
             }
-        }//private void SendMail(string mail, string name)
+        }
+        
+        
+        //private void SendMail(string mail, string name)
         //public void SendMails(IQueryable<Email> emails)
         //{
         //    foreach (Email email in emails)
