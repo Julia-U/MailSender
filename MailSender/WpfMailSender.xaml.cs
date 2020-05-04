@@ -31,6 +31,9 @@ namespace MailSender
             // еще один комментарий с работы
             // ещё один комментарий с github
             InitializeComponent();
+            //cbSenderSelect.ItemsSource = VariablesClass.Senders;
+            //cbSenderSelect.DisplayMemberPath = "Key";
+            //cbSenderSelect.SelectedValuePath = "Value";
         }
 
         private void btnSendEmail_Click(object sender, RoutedEventArgs e)

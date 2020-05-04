@@ -20,6 +20,5 @@
 
     <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="609,322,0,0" VerticalAlignment="Top" Width="146"/>
 
-
   </Grid>
 </Window>
