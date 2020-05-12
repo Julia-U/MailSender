@@ -24,40 +24,41 @@ namespace MailSender_v2
             strLogin = sLogin;
             strPassword = sPassword;
         }
-        private void SendMail(string mail, string name) // Отправка email конкретному адресату
-        {
-            using (MailMessage mm = new MailMessage(strLogin, mail))
-            {
-                mm.Subject = strSubject;
-                mm.Body = "Hello world!";
-                mm.IsBodyHtml = false;
-                SmtpClient sc = new SmtpClient(strSmtp, iSmtpPort);
-                sc.EnableSsl = true;
-                sc.DeliveryMethod = SmtpDeliveryMethod.Network;
-                sc.UseDefaultCredentials = false;
-                sc.Credentials = new NetworkCredential(strLogin, strPassword);
-                try
-                {
-                    sc.Send(mm);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Невозможно отправить письмо " + ex.ToString());
-                }
-
-
-
-            }
-        }
-        
-        
-        //private void SendMail(string mail, string name)
-        //public void SendMails(IQueryable<Email> emails)
+        //private void SendMail(string mail, string name) // Отправка email конкретному адресату
         //{
-        //    foreach (Email email in emails)
+        //    using (MailMessage mm = new MailMessage(strLogin, mail))
+        //    {
+        //        mm.Subject = strSubject;
+        //        mm.Body = "Hello world!";
+        //        mm.IsBodyHtml = false;
+        //        SmtpClient sc = new SmtpClient(strSmtp, iSmtpPort);
+        //        sc.EnableSsl = true;
+        //        sc.DeliveryMethod = SmtpDeliveryMethod.Network;
+        //        sc.UseDefaultCredentials = false;
+        //        sc.Credentials = new NetworkCredential(strLogin, strPassword);
+        //        try
+        //        {
+        //            sc.Send(mm);
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            MessageBox.Show("Невозможно отправить письмо " + ex.ToString());
+        //        }
+        //    }
+        //}
+
+
+        //private void SendMail(string mail, string name);
+
+        //public void SendMails(IQueryable<Emails> emails)
+        //{
+        //    foreach (Emails email in emails)
         //    {
         //        SendMail(email.Email, email.Name);
         //    }
         //}
-    }  //private void SendMail(string mail, string name)
+        //private void SendMail(string mail, string name);
+    }
 }
+
+

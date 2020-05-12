@@ -80,10 +80,16 @@
                 <Image Source="Images\delete.png"/>
               </Button>
             </ToolBar>
-
           </ToolBarTray>
-          <DataGrid Margin="0,65,0,248" Grid.ColumnSpan="4"/>
-
+            
+          <!--<DataGrid Name="dgEmails" ItemsSource="{x:Static local:DataBase.Emails}"
+                    AutoGenerateColumns="False" IsReadOnly="True"--><!-->
+               <DataGrid.Columns>
+                     <DataGridTextColumn Header="#" Binding="{Binding Id}" Width="Auto"/>
+                     <DataGridTextColumn Header="Почта" Binding="{Binding Email}" Width="Auto"/>
+                     <DataGridTextColumn Header="Имя отправителя" Binding="{Binding Name}" Width="*"/>
+               </DataGrid.Columns>
+          </DataGrid>-->
         </Grid>
 
       </TabItem>
@@ -97,7 +103,7 @@
           <Calendar x:Name="cldSchedulDateTimes" HorizontalAlignment="Left" VerticalAlignment="Top" SelectionMode="MultipleRange" Grid.ColumnSpan="2"/>
 
 
-          <Button x:Name="btnSend" HorizontalAlignment="Left" Margin="0,191,0,0" VerticalAlignment="Top" Width="179" Grid.ColumnSpan="2">
+          <Button x:Name="btnSend" HorizontalAlignment="Left" Margin="0,191,0,0" VerticalAlignment="Top" Width="179" Grid.ColumnSpan="2" Click="BtnSend_Click">
             <StackPanel Orientation="Horizontal">
               <Image Source="Images/send_by_time.jpg" Width="15" Height="15" />
               <TextBlock Margin="3,0,0,0" Text="Отправить запланированно" VerticalAlignment="Center" />
@@ -110,7 +116,7 @@
             </StackPanel>
 
           </Button>
-          <xctk:TimePicker HorizontalAlignment="Left" Margin="10,166,0,0" VerticalAlignment="Top" Width="169" Grid.ColumnSpan="2" Height="25"/>
+          <xctk:TimePicker x:Name="tbTimePicker" HorizontalAlignment="Left" Margin="10,166,0,0" VerticalAlignment="Top" Width="169" Grid.ColumnSpan="2" Height="25"/>
         </Grid>
       </TabItem>
       <TabItem x:Name="LetterEditor" Header="Редактор писем" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0">
