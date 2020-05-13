@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:wpfTool="xc"
-        xmlns:local="clr-namespace:MailSender_v2"
+        xmlns:local="MailSender_v2"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" x:Class="MailSender_v2.MainWindow"
         mc:Ignorable="d"
         Title="MainWindow" MinWidth="7" Icon="Images/letter.png">
@@ -82,14 +82,14 @@
             </ToolBar>
           </ToolBarTray>
             
-          <!--<DataGrid Name="dgEmails" ItemsSource="{x:Static local:DataBase.Emails}"
-                    AutoGenerateColumns="False" IsReadOnly="True"--><!-->
+          <DataGrid Name="dgEmails" ItemsSource="{x:Static local:DataBase.Emails}"
+                    AutoGenerateColumns="False" IsReadOnly="True">
                <DataGrid.Columns>
                      <DataGridTextColumn Header="#" Binding="{Binding Id}" Width="Auto"/>
                      <DataGridTextColumn Header="Почта" Binding="{Binding Email}" Width="Auto"/>
                      <DataGridTextColumn Header="Имя отправителя" Binding="{Binding Name}" Width="*"/>
                </DataGrid.Columns>
-          </DataGrid>-->
+          </DataGrid>
         </Grid>
 
       </TabItem>

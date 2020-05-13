@@ -14,6 +14,8 @@ namespace MailSender_v2
         public MainWindow()
         {
             InitializeComponent();
+            DataBase db = new DataBase();
+            dgEmails.ItemsSource = db.Emails;
         }
 
         private void BtnClock_Click(object sender, RoutedEventArgs e)
@@ -94,7 +96,6 @@ namespace MailSender_v2
             sc.SendEmails(dtSendDateTime, emailSender, (IQueryable<Emails>)dgEmails.ItemsSource);
         }
 
-        DataBase db = new DataBase();
-        dgEmails.ItemSource = db.Emails
+
     }
 }

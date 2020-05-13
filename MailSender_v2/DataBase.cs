@@ -8,11 +8,14 @@ namespace MailSender_v2
 {
     public class DataBase
     {
-        private static readonly EmailsDataContext _emailsDataContext = new EmailsDataContext();
+        private EmailsDataContext _emailsDataContext = new EmailsDataContext();
 
-        public static IQueryable<Emails> Emails =>
-            from mail in
+        public IQueryable<Emails> Emails =>
+            from
+                mail
+            in 
                 _emailsDataContext.Emails
-            select mail;
+            select 
+                mail;
     }
 }
